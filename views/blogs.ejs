@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
+  </head>
+  <body>
+
+  <h1><center>
+  <h1> The  Blogs!!!!!!!!!!!</h1>
+  </center></h1>
+
+
+
+  <!-- <% para.forEach(function(blog) { %>
+    <section>
+  <h3><%= blog.topic %>.</h3>
+  <img src="/images/back2.png" alt="">
+
+
+  <% if (blog.body) { %>
+                <% if (blog.body.length < 100) { %>
+
+  <p><%= blog.body %></p>
+  <% } else { %>
+  <p><%= blog.body.substring(0, 100) + "..." %></p>
+  <% } %>
+            <% } %> <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/blogs/<%= blog._id %>">View</a></button>
+                       <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/update/<%= blog._id %>">Edit</a></button>
+                       <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/delete/<%= blog._id %>">Delete</a></button>
+</section>
+
+  <%  }) %>
+    <% para.forEach(function(blog) { %> -->
+  <div className='row' id='ads'>
+      <% para.forEach(function(blog) { %>
+            <div className='col-md-4 mt-4'>
+                <div className='card rounded'>
+                    <div className='card-image'>
+
+                        <img src="/images/back2.png" alt='project1'/>
+                    </div>
+
+                    <div className='card-body text-center'>
+                        <div className='ad-title m-auto'>
+                            <h5 className='text-uppercase'> <%= blog.topic %>.></h5>
+                        </div>
+                        <div class="body">
+                          <% if (blog.body) { %>
+                                        <% if (blog.body.length < 100) { %>
+
+                          <p><%= blog.body %></p>
+                          <% } else { %>
+                          <p><%= blog.body.substring(0, 100) + "..." %></p>
+                          <% } %>
+                                    <% } %>
+                        </div>
+                        <div class="bt">
+
+
+                        <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/blogs/<%= blog._id %>">View</a></button>
+                                  <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/update/<%= blog._id %>">Edit</a></button>
+                                  <button type="button" class="btn btn-sm btn-outline-secondary"><a style="text-decoration: none" href="/delete/<%= blog._id %>">Delete</a></button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <%  }) %>
+
+
+        </div>
+
+
+
+
+      <footer>
+
+        <form class="" action="/post" method="post">
+        <center>
+          <button type="submit" class="beautiful-button" name = "button"> <a  href="/post" role="button">Post A Blog</a></button>
+          <!-- <button type="submit" name="button"> </button> -->
+        </center>
+        </form>
+
+
+  </main>
+  <!DOCTYPE html>
+  <html>
+  <head>
+
+  </head>
+
+
+
+
+
+  </body>
+</html>

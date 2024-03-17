@@ -1,0 +1,35 @@
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Blogs</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+  <body>
+  <div class="container">
+<h1>Update the post</h1>
+  <form  action="/update" method="post">
+
+
+<div class="form-group">
+  <label for="topic">Topic</label>
+  <input type="text" class="form-control"  name="updatedTitle" value="<%=topic%>" >
+
+</div>
+
+
+  <div class="form-group">
+  <label for="body">Body</label>
+  <textarea class="form-control"  rows="7" name="updatedContent" ><%=body%></textarea>
+</div>
+
+
+<button type="submit" class="btn btn-primary" name= "id" value="<%= id %>">Update</button>
+</form>
+</div>
+
+
+</body>
+</html>

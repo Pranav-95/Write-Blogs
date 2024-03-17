@@ -1,0 +1,75 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Blog Post</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+              background-image: url("/images/back.png");
+        }
+        header {
+            background-color:#ECE3CE;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+        header h1 {
+            font-size: 36px;
+            color:  #00257F;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: -30px;
+            position: relative;
+            z-index: 1;
+        }
+        article {
+            padding: 20px;
+        }
+        article h2 {
+            font-size: 28px;
+            color: #0074b8;
+        }
+        article p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #ECE3CE;
+            color: #00257F;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><%=topic%></h1>
+    </header>
+
+    <main>
+        <article>
+
+            <p>
+              <%=body.replace(/<br\s*\/?>/gim, "\\n")%>
+            </p>
+
+        </article>
+    </main>
+
+    <footer>
+        <p>by <%=auth%></p>
+    </footer>
+</body>
+</html>
